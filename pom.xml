@@ -30,6 +30,9 @@
     <module>eureka-server</module>
     <module>service-client</module>
     <module>service-feign</module>
+    <module>service-lucy</module>
+    <module>service-ribbon</module>
+    <module>service-zuul</module>
   </modules>
 
   <dependencies>
