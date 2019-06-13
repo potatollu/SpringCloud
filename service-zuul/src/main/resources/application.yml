@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
+server:
+  port: 9005
+
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon # 路径为/api-a/ 会将请求分配到service-ribbon服务
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign # 路径为/api-b/ 会将请求分配到service-feign服务
